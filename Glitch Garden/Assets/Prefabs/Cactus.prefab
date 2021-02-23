@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 5373097277392382303, guid: d540ab482cb5f7e428160ded96da076f,
     type: 3}
-  gunPosition: {fileID: 1691954875217687093}
+  gun: {fileID: 1691954875217687093}
 --- !u!95 &6482480848203568037
 Animator:
   serializedVersion: 3
