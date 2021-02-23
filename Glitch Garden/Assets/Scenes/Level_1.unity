@@ -1223,6 +1223,7 @@ GameObject:
   - component: {fileID: 1890790953}
   - component: {fileID: 1890790955}
   - component: {fileID: 1890790954}
+  - component: {fileID: 1890790956}
   m_Layer: 5
   m_Name: StarsCountText
   m_TagString: Untagged
@@ -1290,6 +1291,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890790952}
   m_CullTransparentMesh: 0
+--- !u!114 &1890790956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890790952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b557dc06e341764fa08fd92a153863f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stars: 100
+  starAmountText: {fileID: 1890790954}
 --- !u!1 &1916032015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,6 +1710,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1259278416090400363, guid: 7e09dad3d946e4447bb59c7eb1a3bf2e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25150025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259278416090400363, guid: 7e09dad3d946e4447bb59c7eb1a3bf2e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25150025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259278416090400363, guid: 7e09dad3d946e4447bb59c7eb1a3bf2e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4119000943767299397, guid: 7e09dad3d946e4447bb59c7eb1a3bf2e,
         type: 3}
       propertyPath: m_Name
