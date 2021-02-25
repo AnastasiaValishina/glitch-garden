@@ -7,15 +7,24 @@ public class Attacker : MonoBehaviour
 {
     float currentSpeed = 0f;
     GameObject currentTarget;
-    //Animator animator;
+    Animator animator;
 
     private void Start()
     {
-       // animator = GetComponent<Animator>();
+       animator = GetComponent<Animator>();
     }
     void Update()
     {
         transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
+        UpdateAnimationState();
+    }
+
+    private void UpdateAnimationState()
+    {
+        if (!currentTarget)
+        {
+            animator.SetBool("isAttacking", false);
+        }
     }
 
     public void SetMovementSpeed(float speed)
@@ -25,7 +34,19 @@ public class Attacker : MonoBehaviour
 
     public void Attack(GameObject target)
     {
-        GetComponent<Animator>().SetBool("isAttacking", true);
+        animator.SetBool("isAttacking", true);
         currentTarget = target;
+    }
+
+    public void StrikeCurrentTarget(int damage)
+    {
+        if (!currentTarget) { return; }
+
+        Health health = currentTarget.GetComponent<Health>();
+
+        if (health)
+        {
+            health.DealDamage(damage);
+        }
     }
 }
