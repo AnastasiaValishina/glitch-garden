@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cae079fc8f2804390d873ab661398a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitForTime: 5
   winLabel: {fileID: 0}
+  loseLabel: {fileID: 0}
 --- !u!114 &9011933048276949970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c3f80619a1fce724cab7d2089f933f62, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

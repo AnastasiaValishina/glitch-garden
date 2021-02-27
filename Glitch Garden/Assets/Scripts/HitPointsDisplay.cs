@@ -14,8 +14,6 @@ public class HitPointsDisplay : MonoBehaviour
         UpdateDisplay();
     }
 
-
-
     private void UpdateDisplay()
     {
         hitpointsText.text = hitpoints.ToString();
@@ -28,7 +26,7 @@ public class HitPointsDisplay : MonoBehaviour
 
         if (hitpoints <= 0)
         {
-            FindObjectOfType<LevelLoader>().LoadGameOver();
+            FindObjectOfType<LevelController>().HandleLoseCondition();
         }
     }
 }
