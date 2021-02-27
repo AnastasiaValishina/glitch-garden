@@ -9,6 +9,11 @@ public class Attacker : MonoBehaviour
     GameObject currentTarget;
     Animator animator;
 
+    private void Awake()
+    {
+        FindObjectOfType<LevelController>().AttackerSpawned();
+    }
+
     private void Start()
     {
        animator = GetComponent<Animator>();
@@ -48,5 +53,10 @@ public class Attacker : MonoBehaviour
         {
             health.DealDamage(damage);
         }
+    }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelController>().AttackerKilled();
     }
 }
