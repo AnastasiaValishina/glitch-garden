@@ -4,9 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
-{
+{    
+    [SerializeField] GameObject winLabel;
     int numberOfAttackers = 0;
     bool levelTimerFinished = false;
+    float winDelay;
+
+    private void Start()
+    {
+        winLabel.SetActive(false);
+        winDelay = GetComponent<AudioSource>().clip.length;
+    }
 
     public void AttackerSpawned()
     {
@@ -19,9 +27,8 @@ public class LevelController : MonoBehaviour
 
         if (numberOfAttackers <=0 && levelTimerFinished)
         {
-            Debug.Log("End level");
+            StartCoroutine(HandleWinCondition());
         }
-
     }
 
     public void LevelTimerFinished()
@@ -38,5 +45,13 @@ public class LevelController : MonoBehaviour
         {
             spawner.StopSpawning();
         }
+    }
+
+    IEnumerator HandleWinCondition()
+    {
+        winLabel.SetActive(true);
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(winDelay);
+        GetComponent<LevelLoader>().LoadNextScene();
     }
 }
