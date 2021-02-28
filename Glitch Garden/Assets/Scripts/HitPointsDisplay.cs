@@ -5,11 +5,15 @@ using UnityEngine.UI;
 
 public class HitPointsDisplay : MonoBehaviour
 {
-    [SerializeField] int hitpoints = 10;
+    [SerializeField] float baseHitpoints = 3;
     [SerializeField] int damage = 1;
+    
+    float hitpoints;
     Text hitpointsText;
+
     void Start()
     {
+        hitpoints = baseHitpoints - PlayerPrefsController.GetDifficulty();
         hitpointsText = GetComponent<Text>();
         UpdateDisplay();
     }
