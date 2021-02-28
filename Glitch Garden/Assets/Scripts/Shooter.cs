@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    [SerializeField] GameObject projectile;
+    [SerializeField] GameObject projectilePrefab;
     [SerializeField] GameObject gun;
     Animator animator;
+    GameObject projectileParent;
+    const string PROJECTILE_PARENT_NAME = "Projectiles";
 
     AttackerSpawner myLaneSpawner;
 
@@ -15,6 +18,16 @@ public class Shooter : MonoBehaviour
     {
         SetLaneSpawner();
         animator = GetComponent<Animator>();
+        CreateProjectileParent();
+    }
+
+    private void CreateProjectileParent()
+    {
+        projectileParent = GameObject.Find(PROJECTILE_PARENT_NAME);
+        if (!projectileParent)
+        {
+            projectileParent = new GameObject(PROJECTILE_PARENT_NAME);
+        }
     }
 
     private void Update()
@@ -55,7 +68,8 @@ public class Shooter : MonoBehaviour
     }
     public void Fire()
     {
-        Instantiate(projectile, gun.transform.position, gun.transform.rotation);
+        GameObject projectile = Instantiate(projectilePrefab, gun.transform.position, gun.transform.rotation) as GameObject;
+        projectile.transform.parent = projectileParent.transform;
     }
 
 
