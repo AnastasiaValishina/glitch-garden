@@ -10,6 +10,7 @@ public class LevelController : MonoBehaviour
     int numberOfAttackers = 0;
     bool levelTimerFinished = false;
     float winDelay;
+    bool priorityLose = false;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class LevelController : MonoBehaviour
     {
         numberOfAttackers--;
 
-        if (numberOfAttackers <=0 && levelTimerFinished)
+        if (numberOfAttackers <=0 && levelTimerFinished && !priorityLose)
         {
             StartCoroutine(HandleWinCondition());
         }
@@ -59,6 +60,7 @@ public class LevelController : MonoBehaviour
 
     public void HandleLoseCondition()
     {
+        priorityLose = true;
         loseLabel.SetActive(true);
         Time.timeScale = 0;
     }
