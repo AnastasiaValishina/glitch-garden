@@ -16,11 +16,7 @@ public class DefenderButton : MonoBehaviour
     private void UpdateCost()
     {
         Text costText = GetComponentInChildren<Text>();
-        if (!costText)
-        {
-            Debug.LogError(name + "has no cost text");
-        }
-        else
+        if (costText)
         {
             costText.text = defenderPrefab.GetStarCost().ToString();
         }
