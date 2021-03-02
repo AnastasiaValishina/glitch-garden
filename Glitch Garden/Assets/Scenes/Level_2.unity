@@ -323,6 +323,81 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b4ce9ee0239b3a4ba31fe88aff46012, type: 3}
+--- !u!1001 &208646611
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2022087854}
+    m_Modifications:
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375924268225745085, guid: 77d03678320a1ae47b3003a756acc255,
+        type: 3}
+      propertyPath: m_Name
+      value: Gravestone
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77d03678320a1ae47b3003a756acc255, type: 3}
+--- !u!4 &208646612 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4005198015237870164, guid: 77d03678320a1ae47b3003a756acc255,
+    type: 3}
+  m_PrefabInstance: {fileID: 208646611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &245832442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -485,7 +560,7 @@ PrefabInstance:
     - target: {fileID: 6015333471135962731, guid: 0b4ce9ee0239b3a4ba31fe88aff46012,
         type: 3}
       propertyPath: minSpawnDelay
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6015333471135962731, guid: 0b4ce9ee0239b3a4ba31fe88aff46012,
         type: 3}
@@ -3251,7 +3326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b557dc06e341764fa08fd92a153863f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stars: 300
+  stars: 350
   starAmountText: {fileID: 1890790954}
 --- !u!1 &1916032015
 GameObject:
@@ -3460,6 +3535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 245832443}
+  - {fileID: 208646612}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3838,7 +3914,7 @@ PrefabInstance:
     - target: {fileID: 6015333471135962731, guid: 0b4ce9ee0239b3a4ba31fe88aff46012,
         type: 3}
       propertyPath: minSpawnDelay
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6015333471135962731, guid: 0b4ce9ee0239b3a4ba31fe88aff46012,
         type: 3}

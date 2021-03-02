@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1283805280122025071}
-  - component: {fileID: 1283805280122025069}
   - component: {fileID: 4036778396193555081}
   - component: {fileID: 6608287638381881808}
   - component: {fileID: 8854851915797933986}
   - component: {fileID: 6328545839813612021}
-  - component: {fileID: 48304272356228958}
+  - component: {fileID: 1769684270}
+  - component: {fileID: 5035136430067329326}
   m_Layer: 0
   m_Name: Lizard
   m_TagString: Attacker
@@ -37,25 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1283805280122025069
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283805280122025074}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 57b758194412a6547964ad4513dad74c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &4036778396193555081
 Rigidbody2D:
   serializedVersion: 4
@@ -129,7 +110,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4627e42c29cf82641b159dd723ed1329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &48304272356228958
+--- !u!95 &1769684270
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283805280122025074}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57b758194412a6547964ad4513dad74c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5035136430067329326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
